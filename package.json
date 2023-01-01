@@ -1,0 +1,17 @@
+{
+  "name": "@wp-mos/theme",
+  "version": "1.0.0",
+  "author": "Marius P.",
+  "license": "MIT",
+  "homepage": "https://github.com/wp-mos/theme#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^25.0.0",
+    "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "gsap": "^3.11.4"
+  }
+}
