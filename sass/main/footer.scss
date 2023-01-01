@@ -1,0 +1,89 @@
+.mos-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--wp--custom--spacing--p-y) var(--wp--custom--spacing--p-x);
+  margin-block-start: 4rem;
+}
+
+.mos-footer-branding {
+  margin-bottom: 1rem !important;
+}
+
+.mos-footer-address,
+.mos-footer-social {
+  margin-bottom: 4rem !important;
+}
+
+.mos-footer-address {
+  gap: 0.5rem !important;
+}
+
+.mos-footer-address a {
+  color: var(--wp--preset--color--on-surface);
+}
+
+.mos-footer-navigation {
+  margin-bottom: 1rem !important;
+}
+
+.mos-footer-navigation nav ul {
+  justify-content: center;
+}
+
+.mos-footer-navigation nav ul li,
+.mos-footer-secondary-navigation nav ul li {
+  text-transform: capitalize !important;
+  font-size: var(--wp--preset--font-size--body-small);
+}
+
+.mos-footer-navigation nav ul li {
+  color: var(--wp--preset--color--on-surface);
+}
+
+.mos-footer-secondary-navigation nav ul li {
+  color: var(--wp--preset--color--on-surface-variant);
+}
+
+.mos-footer-navigation ul:hover li:not(:hover),
+.mos-footer-secondary-navigation ul:hover li:not(:hover) {
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.mos-footer-navigation ul li a,
+.mos-footer-navigation ul li a:after,
+.mos-footer-secondary-navigation ul li a,
+.mos-footer-secondary-navigation ul li a:after {
+  transition: all 0.2s;
+  position: relative;
+}
+
+.mos-footer-secondary-navigation ul li a {
+  opacity: 0.6;
+}
+
+.mos-footer-navigation ul li a:after,
+.mos-footer-secondary-navigation ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 0%;
+  content: "";
+  height: 1px;
+}
+
+.mos-footer-navigation ul li a:after {
+  background: var(--wp--preset--color--on-surface);
+}
+
+.mos-footer-secondary-navigation ul li a:after {
+  background: var(--wp--preset--color--on-surface-variant);
+}
+
+.mos-footer-navigation ul li a:hover:after,
+.mos-footer-secondary-navigation ul li a:hover:after {
+  width: 100%;
+}
