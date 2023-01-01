@@ -10,7 +10,7 @@
     "start:style-editor": "sass -w --style=compressed src/sass/editor.scss:assets/css/editor.css --no-source-map",
     "start:style": "npm run start:style-main & npm run start:style-editor",
     "build:wp": "wp-scripts build",
-    "build:js": "wp-scripts start --webpack-src-dir=js --output-path=assets/js",
+    "build:js": "wp-scripts start --output-path=assets/js",
     "build:style-main": "sass -w --style=compressed sass/main.scss:assets/css/main.css --no-source-map",
     "build:style-editor": "sass -w --style=compressed sass/editor.scss:assets/css/editor.css --no-source-map",
     "build:style": "npm run build:style-main & npm run build:style-editor",
