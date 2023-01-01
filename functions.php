@@ -40,3 +40,16 @@ if ( ! function_exists( 'mos_scripts' ) ) :
   }
 endif;
 add_action( 'wp_enqueue_scripts', 'mos_scripts' );
+
+// InitBlock class
+class InitBlock {
+  function __construct($block_name) {
+    $this->block_name = $block_name;
+    add_action('init', [$this, 'mos_custom_block_init']);
+  }
+  function mos_custom_block_init() {
+    register_block_type( __DIR__ . "/build/{$this->block_name}" );
+  }
+}
+
+new InitBlock('button');

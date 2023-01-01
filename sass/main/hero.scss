@@ -1,0 +1,66 @@
+.mos-hero {
+  position: relative;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  padding: var(--wp--custom--spacing--p-y) var(--wp--custom--spacing--p-x);
+}
+
+.mos-hero-background,
+.mos-hero-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mos-hero-animation {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: calc(var(--wp--custom--spacing--p-y) + 1rem);
+}
+
+.mos-hero-animation.mos-hero-animation svg {
+  stroke-dasharray: 2048;
+  stroke-dashoffset: 2048;
+}
+
+.mos-hero-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.mos-hero-meta {
+  transform: translateY(9vh);
+}
+
+.mos-hero-headline,
+.mos-hero-text {
+  text-align: center;
+}
+
+.mos-hero-headline {
+  line-height: 1.1;
+  overflow: hidden;
+}
+
+.mos-hero-headline span {
+  font-weight: 900;
+}
+
+@media (min-width: 600px) {
+  .mos-hero-text {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 906px) {
+  .mos-hero-text {
+    max-width: 60%;
+  }
+}

@@ -1,0 +1,117 @@
+.mos-header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: var(--wp--custom--spacing--p-y) var(--wp--custom--spacing--p-x);
+  z-index: 9;
+  background-color: transparent;
+  transition: all 0.3s cubic-bezier(0.12, 0.72, 0.33, 1);
+  z-index: 90;
+}
+
+// Transition to scrolled header
+.mos-header-scrolled {
+  background-color: var(--wp--preset--color--surface);
+  box-shadow: var(--wp--custom--box-shadow);
+}
+
+// Primary Navigation
+.mos-header-primary-navigation ul,
+.mos-header-language-navigation ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.mos-header-primary-navigation ul:hover li:not(:hover),
+.mos-header-language-navigation ul:hover li:not(:hover) {
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.mos-header-primary-navigation ul li a,
+.mos-header-primary-navigation ul li a:after,
+.mos-header-language-navigation ul li a,
+.mos-header-language-navigation ul li a:after {
+  transition: all 0.2s;
+  position: relative;
+}
+
+.mos-header-primary-navigation ul li a:after,
+.mos-header-language-navigation ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 0%;
+  content: "";
+  background: var(--wp--preset--color--on-surface);
+  height: 1px;
+}
+
+.mos-header-primary-navigation ul li a:hover:after,
+.mos-header-language-navigation ul li a:hover:after {
+  width: 100%;
+}
+
+.mos-header-button a {
+  border-width: 1px !important;
+  padding: 4px 12px !important;
+  transition: all 0.2s;
+  font-size: var(--wp--preset--font-size--body-small) !important;
+  opacity: 1;
+}
+
+.mos-header-button a:hover {
+  color: var(--wp--preset--color--surface) !important;
+  background: var(--wp--preset--color--on-surface) !important;
+  opacity: 0.9;
+}
+
+.mos-header .is-menu-open.has-modal-open ul {
+  align-items: center !important;
+  width: 100%;
+}
+
+// with admin bar enabled
+body.admin-bar .mos-header {
+  margin-top: 0;
+}
+
+@media (min-width: 600px) {
+  // with admin bar enabled
+  body.admin-bar .mos-header {
+    margin-top: 2.875rem;
+  }
+
+  // show / hide mobile menu
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: flex;
+  }
+
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: none;
+  }
+}
+
+@media (min-width: 783px) {
+  // with admin bar enabled
+  body.admin-bar .mos-header {
+    margin-top: 2rem;
+  }
+
+  // show / hide mobile menu
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: none;
+  }
+
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: block;
+  }
+}

@@ -1,0 +1,40 @@
+.mos-testimonials {
+  position: relative;
+  padding: var(--wp--custom--spacing--p-y) var(--wp--custom--spacing--p-x);
+  margin-block-start: 4rem;
+}
+
+.mos-testimonials .mos-testimonials-meta {
+  gap: 0px !important;
+}
+
+.mos-testimonials .mos-testimonials-meta h2 span {
+  font-weight: 900;
+}
+
+.mos-testimonials-columns {
+  margin-block-start: 64px !important;
+}
+
+.mos-testimonials-column {
+  padding: 3rem;
+  background-color: var(--wp--preset--color--surface);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0 1px 0, rgba(0, 0, 0, 0.06) 0 3px 6px,
+    rgba(0, 0, 0, 0.06) 0 12px 21px;
+}
+
+.mos-testimoniale-quote {
+  font-size: 6rem;
+  line-height: 4rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+}
+
+.mos-testimonials-column figure {
+  width: 100%;
+}
+
+.mos-testimonials-column-meta {
+  align-items: flex-start !important;
+}
