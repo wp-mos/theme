@@ -79,6 +79,10 @@
   width: 100%;
 }
 
+.mos-header .custom-logo-link img {
+  mix-blend-mode: multiply;
+}
+
 // with admin bar enabled
 body.admin-bar .mos-header {
   margin-top: 0;

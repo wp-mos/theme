@@ -10,7 +10,7 @@ if ( ! function_exists( 'mos_support' ) ) :
       'primary' => __('Primary Navigation', ''),
       'secondary' => __('Secondary Navigation', ''),
       'language' => __('Language Navigation', ''),
-      'services' => __('Services Navigation', ''),
+      'subscriber' => __('Subscriber Navigation', ''),
     ));
   }
 endif;
