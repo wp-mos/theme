@@ -34,7 +34,7 @@
 .mos-contact-grid-bottom:after {
   content: "";
   position: absolute;
-  background-color: var(--wp--preset--color--surface);
+  //background-color: var(--wp--preset--color--surface);
   width: calc(100% - 6px);
   height: calc(100% - 6px);
   border-radius: 3px;
@@ -110,20 +110,20 @@
 
 .mos-contact-grid-form-wrapper {
   width: 100%;
-  padding: 1.5rem;
+  padding: 3rem;
   border-radius: 0.375rem;
   background-color: var(--wp--preset--color--surface);
   box-shadow: rgba(0, 0, 0, 0.03) 0 1px 0, rgba(0, 0, 0, 0.06) 0 3px 6px,
-    rgba(0, 0, 0, 0.06) 0 12px 21px;
+  rgba(0, 0, 0, 0.06) 0 12px 21px;
 }
 
-// // Form
+// Form
 .mos-contact .wp-block-contact-form-7-contact-form-selector {
   width: 100%;
 }
+
 .mos-contact form p {
   margin: 0;
-  padding-bottom: 1.5rem;
 }
 
 .mos-contact form p:nth-child(6) {
@@ -139,70 +139,84 @@
 .mos-contact form span input,
 .mos-contact form span textarea {
   width: calc(100% - 3rem);
-  border-radius: 0.375rem;
-  border: 2px solid var(--wp--preset--color--secondary-container);
   font-family: var(--wp--preset--font-family--sans);
   font-size: var(--wp--preset--font-size--body-large);
   color: var(--wp--preset--color--on-surface-variant);
 }
 
-.mos-contact form span input {
-  line-height: 48px;
-  padding: 0 24px;
-  outline: 0;
-  transition: all ease-in 0.2ms;
+.form-group input.form-input, .form-group textarea.form-input {
+  background-color: #fafafa;
 }
 
-.mos-contact form span textarea {
-  line-height: 24px;
-  padding: 12px 24px;
-  outline: 0;
-  transition: all ease-in 0.2ms;
+.form-group input.form-input:focus, .form-group textarea.form-input:focus {
+  background-color: #f1f1f1;
 }
 
-.mos-contact form span input:focus,
-.mos-contact form span textarea:focus {
-  border: 2px solid var(--wp--preset--color--primary);
-}
+//.mos-contact form span input {
+//  line-height: 48px;
+//  padding: 0 24px;
+//  outline: 0;
+//  transition: all ease-in 0.2ms;
+//}
 
-.mos-contact form .wpcf7-form-control-wrap span {
-  font-family: var(--wp--preset--font-family--sans);
-  font-size: var(--wp--preset--font-size--body-small);
-}
+//.mos-contact form span textarea {
+//  line-height: 24px;
+//  padding: 12px 24px;
+//  outline: 0;
+//  transition: all ease-in 0.2ms;
+//}
+//
+//.mos-contact form span input:focus,
+//.mos-contact form span textarea:focus {
+//  border: 2px solid var(--wp--preset--color--primary);
+//}
+//
+//.mos-contact form .wpcf7-form-control-wrap span {
+//  font-family: var(--wp--preset--font-family--sans);
+//  font-size: var(--wp--preset--font-size--body-small);
+//}
+//
+//.mos-contact .wpcf7-submit {
+//  border-radius: 6px;
+//  font-family: var(--wp--preset--font-family--sans);
+//  font-size: var(--wp--preset--font-size--body-small);
+//  font-weight: 500;
+//  text-transform: uppercase;
+//  letter-spacing: 0.03em;
+//  line-height: 24px;
+//  padding: 4px 12px !important;
+//  color: var(--wp--preset--color--on-primary) !important;
+//  background-color: var(--wp--preset--color--primary) !important;
+//  cursor: pointer;
+//  border: 0;
+//  transition: all 0.2s;
+//  opacity: 1;
+//  min-height: 32px;
+//  -webkit-border-radius: 6px !important;
+//  -webkit-appearance: none !important;
+//}
+//
+//.mos-contact .wpcf7-submit:hover {
+//  color: var(--wp--preset--color--surface) !important;
+//  background: var(--wp--preset--color--on-surface) !important;
+//  opacity: 0.9;
+//}
 
-.mos-contact .wpcf7-submit {
-  border-radius: 6px;
-  font-family: var(--wp--preset--font-family--sans);
-  font-size: var(--wp--preset--font-size--body-small);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  line-height: 24px;
-  padding: 4px 12px !important;
-  color: var(--wp--preset--color--on-primary) !important;
-  background-color: var(--wp--preset--color--primary) !important;
-  cursor: pointer;
-  border: 0;
-  transition: all 0.2s;
-  opacity: 1;
-  min-height: 32px;
-  -webkit-border-radius: 6px !important;
-  -webkit-appearance: none !important;
-}
-
-.mos-contact .wpcf7-submit:hover {
-  color: var(--wp--preset--color--surface) !important;
-  background: var(--wp--preset--color--on-surface) !important;
-  opacity: 0.9;
-}
-
-.wpcf7-response-output {
+.wpcf7-response-output, .wpcf7-not-valid-tip {
   border-color: transparent !important;
   font-family: var(--wp--preset--font-family--sans);
   font-size: var(--wp--preset--font-size--body-small);
-  margin: 1rem 0 0 0 !important;
+
   padding: 0 !important;
   color: #dc3232;
+}
+
+.wpcf7-not-valid-tip {
+  margin: 0rem 0 0 0 !important;
+}
+
+.wpcf7-response-output {
+  margin: 1rem 0 0 0 !important;
 }
 
 .wpcf7-spinner {

@@ -4,6 +4,7 @@ import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
 // register gsap plugins
 gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
+const hero = document.querySelector(".mos-hero");
 
 // header animation
 const animateHeader = ScrollTrigger.create({
@@ -16,33 +17,36 @@ const animateHeader = ScrollTrigger.create({
 const heroTimeLine = gsap.timeline({
   defaults: { ease: "expo.inOut", duration: 0.9 },
 });
-heroTimeLine
-  .fromTo(
-    ".mos-hero-headline, .mos-hero-text, .mos-hero-meta .mos-button",
-    {
-      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
-      y: 60,
-      opacity: 0,
-    },
-    {
-      stagger: 0.12,
-      clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-      y: 0,
-      opacity: 1,
-    }
-  )
-  .fromTo(
-    ".mos-hero-svg",
-    { strokeDashoffset: 2048 },
-    { strokeDashoffset: 0 },
-    "-=0.3"
-  )
-  .fromTo(
-    ".mos-order",
-    { y: 300, autoAlpha: 0 },
-    { y: 0, autoAlpha: 1 },
-    "-=0.6"
-  );
+
+if (hero) {
+  heroTimeLine
+    .fromTo(
+      ".mos-hero-headline, .mos-hero-text",
+      {
+        clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+        y: 60,
+        opacity: 0,
+      },
+      {
+        stagger: 0.12,
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+        y: 0,
+        opacity: 1,
+      }
+    )
+    .fromTo(
+      ".mos-hero-svg",
+      { strokeDashoffset: 2048 },
+      { strokeDashoffset: 0 },
+      "-=0.3"
+    )
+    .fromTo(
+      ".mos-order",
+      { y: 300, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1 },
+      "-=0.6"
+    );
+}
 
 // global animation
 const animateElement = (element, direction) => {
@@ -90,32 +94,33 @@ document.addEventListener("DOMContentLoaded", () => {
 let matchMedia = gsap.matchMedia();
 
 matchMedia.add("(min-width: 906px)", () => {
-  gsap.to(".mos-about-top", {
-    yPercent: -30,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".mos-about",
-      scrub: true,
-    },
-  });
+  if (hero) {
+    gsap.to(".mos-about-top", {
+      yPercent: -30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".mos-about",
+        scrub: true,
+      },
+    });
 
-  gsap.to(".mos-services-top", {
-    yPercent: -30,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".mos-services",
-      scrub: true,
-    },
-  });
-
-  gsap.to(".mos-contact-grid-bottom", {
-    yPercent: -30,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".mos-contact",
-      scrub: true,
-    },
-  });
+    gsap.to(".mos-services-top", {
+      yPercent: -30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".mos-services",
+        scrub: true,
+      },
+    });
+    gsap.to(".mos-contact-grid-bottom", {
+      yPercent: -30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".mos-contact",
+        scrub: true,
+      },
+    });
+  }
 });
 
 matchMedia.add("(min-width: 782px)", () => {

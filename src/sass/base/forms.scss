@@ -1,0 +1,228 @@
+.wpcf7-form h6 {
+  margin: 0;
+  font-size: var(--wp--preset--font-size--body-large);
+  text-transform: uppercase;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.for-row .form-group p {
+  margin: 0 !important;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: var(--wp--preset--font-size--body-small);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--on-surface);
+}
+
+.form-group input.form-input,
+.form-group textarea.form-input {
+  width: calc(100% - 2.25rem);
+  min-width: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  appearance: none;
+  padding: 0;
+  outline: transparent;
+}
+
+.form-group input.form-input,
+.form-group textarea.form-input {
+  font-size: var(--wp--preset--font-size--body-large);
+  line-height: 1.5rem;
+  padding: 1rem;
+}
+
+.form-group input.form-input,
+.form-group textarea.form-input {
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid var(--wp--preset--color--primary-container);
+  background-color: var(--wp--preset--color--surface);
+}
+
+.form-group input.form-input.error,
+.form-group textarea.form-input.error {
+  border-bottom: 2px solid #ff675e;
+}
+
+.form-group input.form-input:focus,
+.form-group textarea.form-input:focus {
+  border-bottom: 2px solid var(--wp--preset--color--primary);
+}
+
+.form-subscribe-button,
+.qbutton {
+  display: inline-flex;
+  justify-content: center;
+  font-family: var(--wp--preset--font-family--sans);
+  font-size: var(--wp--preset--font-size--body-small);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  border-style: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--on-surface);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  -webkit-appearance: none;
+}
+
+.form-subscribe-button:hover,
+.qbutton:hover {
+  background-color: var(--wp--preset--color--on-surface);
+  color: var(--wp--preset--color--surface);
+}
+
+.form-subscribe-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-subscribe-button-wrapper-m {
+  justify-content: center !important;
+}
+
+// select
+select.form-select {
+  letter-spacing: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0);
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  border: none;
+  background: none;
+  appearance: none;
+  padding: 0;
+  padding-right: 0px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid var(--wp--preset--color--primary-container);
+  background-color: var(--wp--preset--color--surface);
+  font-size: var(--wp--preset--font-size--body-large);
+  line-height: 1.5rem;
+  padding: 1rem;
+}
+
+.qbutton {
+  color: var(--wp--preset--color--on-primary-container);
+  background-color: var(--wp--preset--color--primary-container);
+}
+
+// // Multifiles
+.form-group-m {
+  margin-bottom: 0 !important;
+}
+
+.form-block-m:nth-child(2),
+.form-block-m:nth-child(3),
+.form-block-m:nth-child(4),
+.form-block-m:nth-child(5) {
+  margin-bottom: 4rem !important;
+}
+
+#mfcf7_zl_multifilecontainer {
+  display: flex;
+  gap: 1rem;
+  margin: 0 !important;
+  order: 1;
+}
+
+#mfcf7_zl_multifilecontainer .wpcf7-form-control-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--wp--preset--color--surface-variant);
+  border-radius: 6px;
+  font-size: var(--wp--preset--font-size--body-medium);
+  margin: 0 !important;
+  order: 1;
+}
+
+#mfcf7_zl_multifilecontainer .wpcf7-form-control-wrap .delete-file {
+  display: block;
+  height: 24px;
+}
+
+.wpcf7-form-control-wrap {
+  order: 1;
+}
+
+.form-group-multiline {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+}
+
+.form-group-multiline > p:first-child {
+  display: none;
+}
+
+.form-group-multiline > p {
+  margin: 0;
+  gap: 0;
+}
+
+.wpcf7-form .form-block-info {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wpcf7-form .form-block-info > div > p {
+  margin: 0 !important;
+  font-size: var(--wp--preset--font-size--body-small);
+}
+
+@media (min-width: 906px) {
+  .form-row {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.wpcf7-list-item {
+  margin: 3rem 0 0 0 !important;
+}

@@ -11,10 +11,23 @@
   z-index: 90;
 }
 
+.mos-header-start {
+  gap: 1rem !important;
+}
+
 // Transition to scrolled header
 .mos-header-scrolled {
   background-color: var(--wp--preset--color--surface);
   box-shadow: var(--wp--custom--box-shadow);
+}
+
+.mos-header-primary-navigation,
+.mos-header-primary-navigation .wp-block-navigation__responsive-container-open {
+  z-index: 99999;
+}
+
+.mos-header-language-navigation {
+  display: none !important;
 }
 
 // Primary Navigation
@@ -62,7 +75,7 @@
 
 .mos-header-button a {
   border-width: 1px !important;
-  padding: 4px 12px !important;
+  padding: 0.5rem 1rem !important;
   transition: all 0.2s;
   font-size: var(--wp--preset--font-size--body-small) !important;
   opacity: 1;
@@ -94,6 +107,10 @@ body.admin-bar .mos-header {
     margin-top: 2.875rem;
   }
 
+  .mos-header-language-navigation {
+    display: flex !important;
+  }
+
   // show / hide mobile menu
   .wp-block-navigation__responsive-container-open:not(.always-shown) {
     display: flex;
@@ -104,7 +121,16 @@ body.admin-bar .mos-header {
   }
 }
 
+.mos-header-button:hover {
+  border-radius: 6px;
+  color: var(--wp--preset--color--surface);
+  background-color: var(--wp--preset--color--on-surface);
+}
+
 @media (min-width: 783px) {
+  .mos-header-start {
+    gap: 3rem !important;
+  }
   // with admin bar enabled
   body.admin-bar .mos-header {
     margin-top: 2rem;

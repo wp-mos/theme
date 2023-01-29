@@ -1,0 +1,22 @@
+.mos-auth {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--wp--custom--spacing--p-y) var(--wp--custom--spacing--p-x);
+  margin-block-start: 0 !important;
+}
+
+.mos-auth-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.mos-auth-meta {
+  width: 60%;
+}

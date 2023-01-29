@@ -9554,6 +9554,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // register gsap plugins
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_CSSRulePlugin__WEBPACK_IMPORTED_MODULE_2__.CSSRulePlugin);
+const hero = document.querySelector(".mos-hero");
 
 // header animation
 const animateHeader = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.create({
@@ -9572,26 +9573,28 @@ const heroTimeLine = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
     duration: 0.9
   }
 });
-heroTimeLine.fromTo(".mos-hero-headline, .mos-hero-text, .mos-hero-meta .mos-button", {
-  clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
-  y: 60,
-  opacity: 0
-}, {
-  stagger: 0.12,
-  clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-  y: 0,
-  opacity: 1
-}).fromTo(".mos-hero-svg", {
-  strokeDashoffset: 2048
-}, {
-  strokeDashoffset: 0
-}, "-=0.3").fromTo(".mos-order", {
-  y: 300,
-  autoAlpha: 0
-}, {
-  y: 0,
-  autoAlpha: 1
-}, "-=0.6");
+if (hero) {
+  heroTimeLine.fromTo(".mos-hero-headline, .mos-hero-text", {
+    clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+    y: 60,
+    opacity: 0
+  }, {
+    stagger: 0.12,
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+    y: 0,
+    opacity: 1
+  }).fromTo(".mos-hero-svg", {
+    strokeDashoffset: 2048
+  }, {
+    strokeDashoffset: 0
+  }, "-=0.3").fromTo(".mos-order", {
+    y: 300,
+    autoAlpha: 0
+  }, {
+    y: 0,
+    autoAlpha: 1
+  }, "-=0.6");
+}
 
 // global animation
 const animateElement = (element, direction) => {
@@ -9638,30 +9641,32 @@ document.addEventListener("DOMContentLoaded", () => {
 // animations
 let matchMedia = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
 matchMedia.add("(min-width: 906px)", () => {
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".mos-about-top", {
-    yPercent: -30,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".mos-about",
-      scrub: true
-    }
-  });
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".mos-services-top", {
-    yPercent: -30,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".mos-services",
-      scrub: true
-    }
-  });
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".mos-contact-grid-bottom", {
-    yPercent: -30,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".mos-contact",
-      scrub: true
-    }
-  });
+  if (hero) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".mos-about-top", {
+      yPercent: -30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".mos-about",
+        scrub: true
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".mos-services-top", {
+      yPercent: -30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".mos-services",
+        scrub: true
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".mos-contact-grid-bottom", {
+      yPercent: -30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".mos-contact",
+        scrub: true
+      }
+    });
+  }
 });
 matchMedia.add("(min-width: 782px)", () => {
   const scrubElement = document.querySelector(".mos-services-rows-stack");

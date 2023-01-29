@@ -16,3 +16,4 @@ foreach($allFiles as $filename) {
 add_action('after_setup_theme', 'mos_support');
 add_action( 'wp_enqueue_scripts', 'mos_styles' );
 add_action( 'wp_enqueue_scripts', 'mos_scripts' );
+add_action( 'admin_init', 'mos_redirect_home' ); // redirect to index

@@ -41,7 +41,7 @@
 .mos-order-top:after {
   content: "";
   position: absolute;
-  background-color: var(--wp--preset--color--surface);
+  //background-color: var(--wp--preset--color--surface);
   width: calc(100% - 6px);
   height: calc(100% - 6px);
   border-radius: 3px;
@@ -55,7 +55,7 @@
   grid-area: 2 / 2 / 5 / 5;
   background-color: var(--wp--preset--color--surface);
   box-shadow: rgba(0, 0, 0, 0.03) 0 1px 0, rgba(0, 0, 0, 0.06) 0 3px 6px,
-    rgba(0, 0, 0, 0.06) 0 12px 21px;
+  rgba(0, 0, 0, 0.06) 0 12px 21px;
   border-radius: 0.375rem;
   padding: 1.5rem;
   z-index: 9;
@@ -94,6 +94,16 @@
   background-color: var(--wp--preset--color--primary);
 }
 
+.mos-order-cta-row {
+  flex-direction: column;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.mod-order-text {
+  max-width: 100%;
+}
+
 @media (min-width: 782px) {
   .mos-order-column:not(:last-child)::after {
     content: "";
@@ -104,4 +114,14 @@
     right: 0;
     background-color: var(--wp--preset--color--surface-variant);
   }
+}
+
+@media (min-width: 906px) {
+  .mos-order-cta-row {
+    flex-direction: row;
+  }
+
+    .mod-order-text {
+      max-width: 72%;
+    }
 }

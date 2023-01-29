@@ -27,7 +27,7 @@
 .mos-about-top:after {
   content: "";
   position: absolute;
-  background-color: var(--wp--preset--color--surface);
+  //background-color: var(--wp--preset--color--surface);
   width: calc(100% - 6px);
   height: calc(100% - 6px);
   border-radius: 3px;

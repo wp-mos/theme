@@ -87,3 +87,15 @@
 .mos-footer-secondary-navigation ul li a:hover:after {
   width: 100%;
 }
+
+.mos-footer-secondary-navigation .wp-block-navigation__container {
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 906px) {
+.mos-footer-secondary-navigation .wp-block-navigation__container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}

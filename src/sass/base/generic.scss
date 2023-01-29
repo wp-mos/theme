@@ -17,3 +17,11 @@ body {
 .wp-block-template-part {
   margin-block-start: 0;
 }
+
+.padding {
+  padding: var(--wp--custom--spacing--p-y) var(--wp--custom--spacing--p-x);
+}
+
+.grecaptcha-badge {
+  display: none;
+}

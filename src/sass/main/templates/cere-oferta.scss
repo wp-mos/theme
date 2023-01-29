@@ -1,0 +1,23 @@
+.remove-margin {
+  margin: 0 !important;
+}
+
+.mos-cerere-oferta-hero {
+  position: relative;
+  padding: var(--wp--custom--spacing--p-y) var(--wp--custom--spacing--p-x);
+  background-color: var(--wp--preset--color--primary-container);
+}
+
+.mos-cerere-oferta-hero-row {
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.mos-cerere-oferta {
+  width: 100%;
+  padding: var(--wp--custom--spacing--p-y) var(--wp--custom--spacing--p-x);
+}
+
+.mos-cerere-oferta-form {
+  width: 100%;
+}
