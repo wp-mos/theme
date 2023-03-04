@@ -1,3 +1,4 @@
+import { link } from "@wordpress/icons";
 import { useBlockProps } from "@wordpress/block-editor";
 import {
   ToolbarGroup,
@@ -45,6 +46,10 @@ const Edit = (props) => {
   return (
     <>
       <BlockControls>
+        <ToolbarGroup>
+          <ToolbarButton onClick={buttonHandler} icon={link} />
+        </ToolbarGroup>
+
         <ToolbarGroup>
           <ToolbarButton
             isPressed={props.attributes.config === "primary"}
